@@ -17,14 +17,14 @@ from pymsgbox import *
 from loguru import logger
 import pandas as pd
 import pyperclip as pc
-import time
+import time 
 import os
 
 class Neogrid_Venda:
 
     def __init__(self) -> None:
         logger.success('Consulta no site iniciado com sucesso.')
-        # self.proxy = '10.228.5.31:8080'
+        self.proxy = '10.228.5.31:8080'
         self.diretorio_download = os.getcwd() + "\\BASE"
         self.arquivoParametros = os.getcwd() + '\\Parametros.txt'
         usuario, senha, dias, setor = self.carrega_parametros(self.arquivoParametros)
